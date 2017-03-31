@@ -15,7 +15,7 @@ public class CIS163Q<T> {
 	 * 
 	 * @param Node n
 	 */
-	public void addToEnd(Node n){
+	public void enQ(Node n){
 		//Makes n come after tail
 		tail.setNextNode(n); 
 		
