@@ -10,5 +10,18 @@ public class CIS163Q<T> {
 
 	}
 
+	public Node dequeue(){
+		Node temp, tempHead;
+		temp = head.getNextNode();
+		temp.setPerviousNode(null);
+		head.setNextNode(null);
+		
+		tempHead = head;
+		head = temp;
+		
+		
+		return tempHead;
+		
+	}
 
 }
