@@ -15,7 +15,7 @@ public class CIS163Q<T> {
 		int temp = 0;
 		Node<t> cur = first;
 
-		while (cur.getNextNode().getThisElement() != null)
+		while (cur.getNextNode() != null)
 		{
 			temp++;
 			cur = cur.getNextNode();
