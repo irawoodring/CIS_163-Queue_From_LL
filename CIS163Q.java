@@ -9,6 +9,25 @@ public class CIS163Q<T> {
 
 
 	}
+	
+	/**
+	 * Adds node n to the end of the queue
+	 * 
+	 * @param Node n
+	 */
+	public void enQ(Node n){
+		//Makes n come after tail
+		tail.setNextNode(n); 
+		
+		//links n's prev. node tail
+		n.setPreviousNode(tail);
+		
+		//updates tail
+		this.tail = n;
+		
+		//increments size
+		size++;
+	}
 
 	public Node dequeue(){
 		Node temp, tempHead;
