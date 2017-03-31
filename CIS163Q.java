@@ -4,9 +4,9 @@ public class CIS163Q<T> {
 	private Node<T> last;
 	private int size;
 	
-	Public CIS163Q(int s){
+	Public CIS163Q(){
 		
-		this.size = s;
+
 
 	}
 
