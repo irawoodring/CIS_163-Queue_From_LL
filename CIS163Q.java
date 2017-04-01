@@ -44,7 +44,7 @@ public class CIS163Q<T> {
 		size++;
 	}
 
-	public int size(Node<t> first)
+	public int size()
 	{
 		return this.size;
 	}
