@@ -3,13 +3,13 @@ public class CIS163Q<T> {
 	private Node<T> head;
 	private Node<T> tail;
 	private int size;
-	
+
 	public CIS163Q(){
-		
+
 		size = 0;
 
 	}
-	
+
 	/**
 	 * We want people to be able to add an
 	 * element to the list, not a node.  So
@@ -33,20 +33,20 @@ public class CIS163Q<T> {
 	private void enQ(Node n){
 		//Makes n come after tail
 		tail.setNextNode(n); 
-		
+
 		//links n's prev. node tail
 		n.setPreviousNode(tail);
-		
+
 		//updates tail
 		this.tail = n;
-		
+
 		//increments size
 		size++;
 	}
 
 	public int size(Node<t> first)
 	{
-    return this.size;
-}
+		return this.size;
+	}
 
 }
