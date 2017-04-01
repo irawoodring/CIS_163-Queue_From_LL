@@ -44,18 +44,9 @@ public class CIS163Q<T> {
 		size++;
 	}
 
-	public T dequeue(){
-		Node temp, tempHead;
-		temp = head.getNextNode();
-		temp.setPreviousNode(null);
-		head.setNextNode(null);
-		
-		tempHead = head;
-		head = temp;
-		
-		
-		return (T)tempHead.getThisElement();
-		
-	}
+	public int size(Node<t> first)
+	{
+    return this.size;
+}
 
 }
