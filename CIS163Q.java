@@ -1,52 +1,36 @@
 public class CIS163Q<T> {
-
+	
 	private Node<T> head;
 	private Node<T> tail;
 	private int size;
 
 	public CIS163Q(){
-
+		head = null;
+		tail = null;
 		size = 0;
-
 	}
 
-	/**
-	 * We want people to be able to add an
-	 * element to the list, not a node.  So
-	 * we will create this method for them to use
-	 * and call our internal enQ on a new
-	 * node we create.  This is ok because
-	 * we can overload methods.
-	 * @param T an element
-	 */
-	public void enQ(T t){
-		Node n = new Node();
-		n.setThisElement(t);
-		enQ(n);
+	private class Node<T>{
+		protected T element;
+		protected Node<T> next;
+		
+		protected Node(T element){
+			this.element = element;
+		}
 	}
 
-	/**
-	 * Adds node n to the end of the queue
-	 * 
-	 * @param Node n
-	 */
-	private void enQ(Node n){
-		//Makes n come after tail
-		tail.setNextNode(n); 
-
-		//links n's prev. node tail
-		n.setPreviousNode(tail);
-
-		//updates tail
-		this.tail = n;
-
-		//increments size
+	public void enQ(T element){
+		Node<T> t = new Node<T>(element);
+		tail.next = t;
+		tail = t;
 		size++;
 	}
 
-	public int size()
-	{
-		return this.size;
+	public T deQ(){
+		Node<T> temp = head;
+		head = head.next;
+		size--;
+		return temp.element;
 	}
 
 }
