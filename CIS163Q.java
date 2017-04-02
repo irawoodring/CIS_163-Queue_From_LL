@@ -21,8 +21,14 @@ public class CIS163Q<T> {
 
 	public void enQ(T element){
 		Node<T> t = new Node<T>(element);
-		tail.next = t;
-		tail = t;
+		if(size==0){
+			head = t;
+			head.next = t;
+			tail = t;
+		} else {
+			tail.next = t;
+			tail = t;
+		}
 		size++;
 	}
 
