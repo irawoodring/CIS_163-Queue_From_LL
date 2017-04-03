@@ -32,11 +32,18 @@ public class CIS163Q<T> {
 		size++;
 	}
 
-	public T deQ(){
+	public T deQ() throws EmptyQException{
+		if(size == 0){
+			throw new EmptyQException("The Q is empty");
+		}
 		Node<T> temp = head;
 		head = head.next;
 		size--;
 		return temp.element;
+	}
+	
+	public int size(){
+		return size;
 	}
 
 }
